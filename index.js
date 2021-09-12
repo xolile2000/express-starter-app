@@ -16,38 +16,21 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-const names = [];
+let counter = 0;
 
 app.get('/', function(req, res) {
-	res.send('Hello from my get route : ' + req.query.name);
-});
-
-app.get('/info', function(req, res) {
-	res.render('info');
-	// res.send('Hello from my get route : ' + req.query.name);
-});
-
-app.get('/subscribe/:email', function(req, res) {
-	const message = 'we will email you at: ' + req.params.email;
-	res.send(message);
-});
-
-app.post('/info', function(req, res) {
-
-	names.push({
-		firstName : req.body.firstName,
-		lastName : req.body.lastName
+	res.render('index', {
+		counter
 	});
-
-	res.send(`Hello, ${req.body.firstName} ${req.body.lastName}`);
 });
 
-app.get('/names', function(req, res) {
-	res.render('names', {names, 'code' : '007fy'});
+app.post('/count', function(req, res) {
+	counter++;
+	res.redirect('/')
 });
+
 
 // start  the server and start listening for HTTP request on the PORT number specified...
-
 app.listen(PORT, function() {
 	console.log(`App started on port ${PORT}`)
 });
