@@ -1,3 +1,4 @@
 # UJ Express introduction 101
 
-[ExpressJS Workshop recording](https://www.youtube.com/watch?v=VzhLrksHyQM)
+A basic ExpressJS application configured with Form support and Handlebars templating.
+
