@@ -34,29 +34,29 @@ app.get('/', function(req, res) {
 });
 app.post('/buy',function(req,res){
 
- var pizzaSize = req.body.medium
+ var mediumPizza = req.body.medium
  
- 
-
-
-shoppingCarts.buy(pizzaSize)
+shoppingCarts.buy(mediumPizza);
 
 	res.redirect('/')
 });
+
 app.post('/buy/:large',function(req,res){
-	var pizzaSize = req.body.large
+
+	var largePizza = req.body.large
    
+	console.log( shoppingCarts.buy(largePizza))
+   shoppingCarts.buy(largePizza);
    
-   shoppingCarts.buy(pizzaSize)
-   
-	   res.redirect('/', {pizzaSize:req.body.large})
+	   res.redirect('/')
    });
+   
 
    app.post('buy/:small',function(req,res){
-	var pizzaSize = req.body.small
+	var smallPizza = req.body.small
    
    
-   shoppingCarts.buy(pizzaSize)
+   shoppingCarts.buy(smallPizza);
   
 	   res.redirect('/')
    });
