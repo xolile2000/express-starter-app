@@ -1,15 +1,139 @@
-<h1>Counter Index</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PerfectPizza</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div>
+    <div class="header" >
+      <h1>ZANDILE'S ONLINE PIZZA STORE</h1>
+    </div>
+
+    {{!-- <div class="cartTotal " >
+      <strong>Total price</strong>  
+      <span class="cartTotalPrice">0.00</span>
+      <a href="#">
+        <img src="shopping-cart.png" alt="">
+      </a>
+      </div> --}}
+
+
+    <div class="cart" >
+      <h3>Shopping Cart</h3>
+      <img src="shopping-cart.png" alt="">
+
+        <table>
+          <tr>
+            <td><strong>Small pizzas total:</strong></td>
+            <td><span class="smallTotalPrice">{{smallTotal}}</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Medium pizzas total:</strong></td>
+            <td><span class="mediumTotalPrice">{{mediumTotal}}</span></td>
+          </tr>
+          <tr>
+            <td><strong>Large pizza total:</strong></td>
+            <td><span class="largeTotalPrice">{{largeTotal}}</span></td>
+          </tr>
+          <tr>
+            <td><strong>Total price</strong></td>
+            <td><span class="totalPrice">{{totalPrice}}</span></td>
+          </tr>
+        </table> 
+        <button class="Order" value =" order" name= "medium" type = "submit">order</button>
+    </div>
+
+<form action="buy" method="POST">
+    <div class="pizzas">
+      <div class="pizza medium">
+        <div class="info">
+          <img src="pizza.png"
+            alt="">
+          <h2>Medium Pizza</h2>
+          <strong>R65.00</strong>
+
+          <div>
+            medium margeritha pizza with 3 toppings max.
+            2 or less meat topping.
+            3 or less other toppings.
+          </div>
+        </div>
+
+        <div class="orderBox">
+          <button class="btn orderMediumPizza" value='medium'name ="medium" type='submit' style="margin-left: auto">buy</button>
+        </div>
+      
+
+      </div>
+      
+      <div class="pizza large">
+        <div class="info">
+          <img src="pizza.png"
+            alt="">
+          <h2>Large Pizza</h2>
+          <strong>85.00</strong>
+          <div>
+            large margeritha pizza with 3 toppings max.
+            3 meat toppings max.
+            3 or less other toppings.
+          </div>
+        </div>
+        <div class="orderBox" >
+          <button class="btn orderLargePizza"value='large'name ="large" type='submit'style="margin-left: auto">buy</button>
+        </div>
+
+      </div>
+      
+      
+      <div class="pizza small">
+        <div class="info">
+          <img src="pizza.png"
+            alt="">
+          <h2>Small Pizza</h2>
+          <strong>35.00</strong>
+          <i>
+            <ul>
+              <li>small pizza with 3 toppings</li>
+              <li>1 meat topping.</li>
+              <li>3 or less other toppings.</li>
+            </ul>
+          </i>
+        </div>
+        <div class="orderBox">
+          <button class="btn orderSmallPizza" value='small'name ="small"type='submit'style="margin-left: auto">buy</button>
+        </div>
+      </div>
+    </div>
+     
+    </form>
+    
+    <div class="footer">
+      <div class="contact">
+        
+      </div>
+      
+    </div>
+  </div>
+</body>
+<script src="order-pizza.js"></script>
+<script src="pizza.js"></script>
+
+<hr>
 
 
 <div>
-    Start here
 
-    <form action="/count" method="post">
-        <div class="counter" >
-            {{counter}}
-        </div>    
-        <input type="submit" value="Press button to count">
-    
-    </form>
+  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
 
 </div>
+
+
+</html>
+</html>
